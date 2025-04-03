@@ -1,0 +1,32 @@
+body {
+    font: var(--font-body);
+    color: var(--theme-foreground);
+    background: var(--theme-background);
+    margin: 0;
+}
+
+
+h1 {
+    font: var(--font-big);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font: var(--font-heading-lg);
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font: var(--font-heading-md);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font: var(--font-heading-sm);
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font: var(--font-body);
+    margin-bottom: 1.25rem;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@your-org/style-kit",
+  "version": "1.0.0",
+  "description": "Modular CSS style kit for Observable Framework and other web projects",
+  "main": "styles/main.css",
+  "files": ["styles"],
+  "keywords": ["css", "observable", "design-system", "style-kit"],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,66 @@
+header#observablehq-header {
+    background: black;
+    color: white;
+    height: 4.5rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-sizing: border-box;
+    border-bottom: none;
+    box-shadow: none;
+    transition: top 0.5s ease;
+}
+
+body.hide-header {
+    padding-top: 0;
+}
+
+body.hide-header header#observablehq-header {
+    top: -4.5rem;
+}
+
+body.hide-header #observablehq-sidebar {
+    top: 0 !important;
+    transition: top 0.5s ease !important;
+}
+
+header#observablehq-header a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font: var(--font-small);
+    font-weight: 600;
+}
+
+.header-page-title {
+    font: var(--font-small);
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+header#observablehq-header svg,
+header#observablehq-header .external-arrow {
+    flex-shrink: 0;
+}
+
+header#observablehq-header svg {
+    height: 3rem;
+    width: auto;
+}
+
+header#observablehq-header .external-arrow {
+    height: 1.1rem;
+    width: auto;
+}

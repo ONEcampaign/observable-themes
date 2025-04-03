@@ -1,0 +1,37 @@
+:root {
+    --sans-serif: "Inter", "Helvetica Neue", helvetica, sans-serif;
+    --serif: Georgia, serif;
+    --monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+    --font-big: 900 2.25rem/1.2 var(--sans-serif);
+    --font-heading-lg: 800 1.5rem/1.3 var(--sans-serif);
+    --font-heading-md: 700 1.25rem/1.3 var(--sans-serif);
+    --font-heading-sm: 700 1.125rem/1.3 var(--sans-serif);
+    --font-body: 400 1rem/1.7 var(--sans-serif);
+    --font-small: 400 0.875rem/1.6 var(--sans-serif);
+
+    --theme-background: hsl(0, 0%, 100%);
+    --theme-background-alt: hsl(0, 0%, 96.1%);
+    --theme-foreground: hsl(229, 6%, 13%);
+    --theme-foreground-alt: hsl(0, 0%, 9%);
+    --theme-foreground-muted: hsl(0, 0%, 45.1%);
+    --theme-foreground-faint: hsl(0, 0%, 69%);
+    --theme-foreground-fainter: hsl(0, 0%, 89.8%);
+    --theme-foreground-faintest: hsl(0, 0%, 96.1%);
+    --theme-foreground-focus: hsl(171, 70%, 25%);
+
+    --theme-green: hsl(171, 70%, 25%);
+    --theme-blue: hsl(229, 100%, 51%);
+    --theme-yellow: hsl(43, 74%, 66%);
+    --theme-red: hsl(0, 100%, 60%);
+
+    --observablehq-max-width: 100vw;
+    --observablehq-header-height: 3rem;
+    --observablehq-footer-height: 3rem;
+
+    --plot-color-1: hsl(12, 76%, 61%);
+    --plot-color-2: hsl(173, 58%, 39%);
+    --plot-color-3: hsl(197, 37%, 24%);
+    --plot-color-4: hsl(43, 74%, 66%);
+    --plot-color-5: hsl(27, 87%, 67%);
+}

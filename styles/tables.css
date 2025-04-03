@@ -1,0 +1,10 @@
+table {
+    max-width: 960px;
+    border-collapse: collapse;
+    overflow-y: scroll;
+    display: block;
+}
+th, td {
+    white-space: nowrap;
+    padding: 5px;
+}

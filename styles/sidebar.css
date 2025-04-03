@@ -1,0 +1,10 @@
+#observablehq-sidebar {
+    top: 4.5rem !important;
+    transition: top 0.5s ease !important;
+    font: var(--font-small);
+}
+
+#observablehq-toc {
+    font: var(--font-small);
+    color: var(--theme-foreground-muted);
+}

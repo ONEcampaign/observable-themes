@@ -1,0 +1,33 @@
+.card {
+    background: var(--theme-background);
+    border: 1px solid var(--theme-foreground-fainter);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    font: var(--font-small);
+}
+
+.note, .tip, .warning, .caution {
+    border-left: 4px solid var(--theme-foreground-muted);
+    background-color: var(--theme-background-alt);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    font: var(--font-small);
+}
+
+.tip {
+    border-left-color: var(--theme-green);
+    background-color: hsl(171, 45%, 90%);
+}
+
+.warning {
+    border-left-color: var(--theme-yellow);
+    background-color: hsl(43, 74%, 90%);
+}
+
+.caution {
+    border-left-color: var(--theme-red);
+    background-color: hsl(0, 100%, 94%);
+}
