@@ -40,7 +40,7 @@ In your `observablehq.config.js`:
 Note that this would import all styling. 
 
 ```js
-import { generateHeader } from "npm:@one-data/observable-themes/header-template";
+import { generateHeader } from "@one-data/observable-themes/header-template";
 
 export default {
   title: "ODA Dashboard",
@@ -49,7 +49,7 @@ export default {
     <script src="npm:@one-data/observable-themes/header.js" defer></script>
     <script src="npm:@one-data/observable-themes/footer.js" defer></script>
   `,
-  header: generateHeader("title"), // Dynamic header with page title
+  header: generateHeader({title: "App title"}), // Dynamic header with page title
 };
 ```
 
