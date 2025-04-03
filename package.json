@@ -1,10 +1,31 @@
 {
-  "name": "@your-org/style-kit",
-  "version": "1.0.0",
-  "description": "Modular CSS style kit for Observable Framework and other web projects",
+  "name": "@one-data/observable-themes",
+  "version": "0.1.0",
+  "description": "Modular CSS style kit for Observable Framework projects",
   "main": "styles/main.css",
-  "files": ["styles"],
-  "keywords": ["css", "observable", "design-system", "style-kit"],
-  "author": "Your Name",
-  "license": "MIT"
+  "exports": {
+    ".": {
+      "import": "./styles/main.css"
+    },
+    "./header": "./header.js",
+    "./footer": "./footer.js",
+    "./header-template": "./header-template.js",
+    "./styles/*": "./styles/*"
+  },
+  "files": [
+    "styles",
+    "header.js",
+    "footer.js",
+    "header-template.js"
+  ],
+  "keywords": [
+    "css",
+    "Observable Framework"
+  ],
+  "author": "Jorge Rivera",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ONEcampaign/observable-themes"
+  }
 }
