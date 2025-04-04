@@ -48,6 +48,9 @@ header#observablehq-header a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-left: solid 1px white;
+    padding-left: .5rem;
+    transform: translateY(-1px);
 }
 
 header#observablehq-header svg,
