@@ -10,11 +10,13 @@
  * background-color: var(--teal);
  * color: var(--orange);
  */
-export function setCustomColors(yourPalette) {
+export function setCustomColors(palette, { prefix = "" } = {} ) {
     const root = document.documentElement;
 
-    Object.entries(yourPalette).forEach(([key, value]) => {
-        root.style.setProperty(`--${key}`, value);
+    Object.entries(palette).forEach(([key, value]) => {
+        if (value != null) {
+           root.style.setProperty(`--${prefix}${key}`, value);
+        }
     });
 }
 
