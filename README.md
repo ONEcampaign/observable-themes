@@ -79,6 +79,7 @@ generateHeader({ title: "My Awesome Dashboard" });
 ├── header.js              # Sticky header scroll behavior
 ├── footer.js              # Injects footer on page load
 ├── header-template.js     # `generateHeader` function
+├── color-palette.js       # ONE colors and `setCustomColors` function
 └── package.json
 ```
 
