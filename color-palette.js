@@ -1,24 +1,29 @@
 
 /**
- * Applies a custom color palette to CSS variables
+ * Applies a custom color palette to CSS variables.
  *
- * @param {Object} yourPalette - An object where keys are variable names and values are CSS color strings.
+ * @param {Object} palette - An object where keys are variable names and values are CSS color strings.
+ * @param {Object} [options] - Configuration options.
+ * @param {string} [options.prefix=""] - A prefix to be added to each CSS variable name.
+ *
  * @example
- * setCustomColors({ teal: '#00f5e1', orange: '#ff9900' });
+ * setCustomColors({ teal: '#00f5e1', orange: '#ff9900' }, { prefix: "custom" });
+ * // Generates: --custom-teal: #00f5e1; --custom-orange: #ff9900
  *
- * You can then use these colors in your stylesheets:
- * background-color: var(--teal);
- * color: var(--orange);
+ * // Use in CSS:
+ * // background-color: var(--custom-teal);
+ * // color: var(--custom-orange);
  */
-export function setCustomColors(palette, { prefix = "" } = {} ) {
+export function setCustomColors(palette, { prefix = "" } = {}) {
     const root = document.documentElement;
 
     Object.entries(palette).forEach(([key, value]) => {
         if (value != null) {
-           root.style.setProperty(`--${prefix}${key}`, value);
+            root.style.setProperty(`--${prefix}-${key}`, value);
         }
     });
 }
+
 
 
 export const ONEColors = {
@@ -120,4 +125,9 @@ export const greyScale = {
     midGrey: ONEColors.grey2,
     lightGrey: ONEColors.grey3,
     white: ONEColors.grey4
+}
+
+export function applyONEPalette() {
+    setCustomColors(ONEPalette, {prefix: "one-data"});
+    setCustomColors(greyScale, {prefix: "one-data"});
 }
