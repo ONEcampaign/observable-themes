@@ -3,8 +3,9 @@
 Modular CSS and utility JavaScript for styling [Observable Framework](https://observablehq.com/framework) projects. This package provides:
 
 - A fully modular CSS design system
-- A dynamic, reusable header generator for framework pages
+- Dynamic, reusable header and footer generators for framework pages
 - Support for custom headers, footers, cards, plots, and more
+- ONE's color palette
 
 ---
 
@@ -12,8 +13,9 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 
 - Fully modular CSS (`styles/`) for page structure and components
 - Drop-in `main.css` for a complete theme
-- Dynamic `generateHeader()` utility with custom page titles
-- Sticky header and footer scripts
+- Dynamic `generateHeader()` utility with custom page titles and scroll-triggered reactivity
+- Dynamic `generateHeader()` utility
+- `color-palette` module with ONE's colors and `setCustomColors()` utility to inject custom colors into css stylesheets
 - Ready for CDN or npm use
 
 ---
@@ -40,16 +42,13 @@ In your `observablehq.config.js`:
 Note that this would import all styling. 
 
 ```js
-import { generateHeader } from "@one-data/observable-themes/header-template";
+import { generateHeader } from "@one-data/observable-themes/header";
+import { generateFooter } from "@one-data/observable-themes/footer";
 
 export default {
-  title: "ODA Dashboard",
-  head: `
-    <link rel="stylesheet" href="npm:@one-data/observable-themes/styles/main.css">
-    <script src="npm:@one-data/observable-themes/header.js" defer></script>
-    <script src="npm:@one-data/observable-themes/footer.js" defer></script>
-  `,
-  header: generateHeader({title: "App title"}), // Dynamic header with page title
+    title: "App title",
+    header: generateHeader({title: "App title"}),
+    footer: generateFooter()
 };
 ```
 
@@ -78,7 +77,6 @@ generateHeader({ title: "My Awesome Dashboard" });
 │   └── variables.css
 ├── header.js              # Sticky header scroll behavior
 ├── footer.js              # Injects footer on page load
-├── header-template.js     # `generateHeader` function
 ├── color-palette.js       # ONE colors and `setCustomColors` function
 └── package.json
 ```
