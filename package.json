@@ -1,6 +1,7 @@
 {
   "name": "@one-data/observable-themes",
   "version": "0.2.0",
+  "type": "module",
   "description": "Modular CSS style kit for Observable Framework projects",
   "main": "styles/main.css",
   "exports": {
@@ -8,15 +9,17 @@
       "import": "./styles/main.css"
     },
     "./header": "./header.js",
+    "./scroll-header": "./scroll-header.js",
     "./footer": "./footer.js",
-    "./header-template": "./header-template.js",
-    "./styles/*": "./styles/*"
+    "./styles/*": "./styles/*",
+    "./color-palette": "./color-palette.js"
   },
   "files": [
     "styles",
     "header.js",
+    "scroll-header.js",
     "footer.js",
-    "header-template.js"
+    "color-palette.js"
   ],
   "keywords": [
     "css",

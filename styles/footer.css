@@ -1,35 +1,39 @@
-#observablehq-footer {
-    margin-top: 8rem;
-    font: var(--font-small);
-    color: var(--theme-foreground-muted);
+:root {
+    --footer-height: 80px; /* adjust this as needed */
+    --footer-logo-height: 48px;
+    --footer-padding-y: 0.5rem;
+    --footer-padding-x: 2rem;
 }
 
-.site-footer {
-    min-height: var(--observablehq-footer-height);
+#observablehq-center #observablehq-footer {
+    min-height: var(--footer-height);
+    height: var(--footer-height); /* control height explicitly */
     width: 100vw;
-    padding: 0.5rem 0;
+    padding: var(--footer-padding-y) 0;
+    margin: 0;
     background: black;
     color: white;
     position: relative;
     z-index: 10;
-    transition: transform 0.3s ease;
+    margin-left: calc(0px - var(--observablehq-inset-left, 0px));
 }
 
 .footer-content {
     max-width: 100vw;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--footer-padding-x);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    height: 100%; /* ensures flex items fill the footer's height */
 }
 
 .footer-logo-link {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: var(--footer-logo-height);
 }
 
 .footer-text {

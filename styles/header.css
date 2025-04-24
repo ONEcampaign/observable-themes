@@ -1,8 +1,16 @@
+:root {
+    --header-height: 4.5rem;
+    --header-padding-x: 1rem;
+    --sidebar-top: var(--header-height);
+}
+
+
 header#observablehq-header {
     background: black;
     color: white;
-    height: 4.5rem;
-    padding: 0 3rem;
+    height: var(--header-height);
+    padding: 0 var(--header-padding-x);
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,13 +30,19 @@ body.hide-header {
     padding-top: 0;
 }
 
+/* Hide header on scroll */
 body.hide-header header#observablehq-header {
-    top: -4.5rem;
+    top: calc(-1 * var(--header-height));
+}
+
+/* Sidebar position should match header height */
+body #observablehq-sidebar {
+    top: var(--sidebar-top);
+    transition: top 0.5s ease !important;
 }
 
 body.hide-header #observablehq-sidebar {
-    top: 0 !important;
-    transition: top 0.5s ease !important;
+    top: 0;
 }
 
 header#observablehq-header a {
