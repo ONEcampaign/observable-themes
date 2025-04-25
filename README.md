@@ -4,8 +4,8 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 
 - A fully modular CSS design system
 - Dynamic, reusable header and footer generators for framework pages
-- Support for custom headers, footers, cards, plots, and more
 - ONE's color palette
+- ONE logos in png and favicon formats
 
 ---
 
@@ -16,6 +16,7 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 - Dynamic `generateHeader()` utility with custom page titles and scroll-triggered reactivity
 - Dynamic `generateHeader()` utility
 - `color-palette` module with ONE's colors and `setCustomColors()` utility to inject custom colors into css stylesheets
+- `use-logo` module with access to ONE logos
 - Ready for CDN or npm use
 
 ---
@@ -75,9 +76,10 @@ generateHeader({ title: "My Awesome Dashboard" });
 │   ├── sidebar.css
 │   ├── tables.css
 │   └── variables.css
-├── header.js              # Sticky header scroll behavior
-├── footer.js              # Injects footer on page load
-├── color-palette.js       # ONE colors and `setCustomColors` function
+├── header.js              # Injects header with scroll behavior 
+├── footer.js              # Injects footer
+├── use-colors.js          # ONE color palette and `setCustomColors` function
+├── use-images.js          # ONE logos
 └── package.json
 ```
 
