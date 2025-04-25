@@ -6,14 +6,13 @@ body {
 }
 
 #observablehq-center{
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 #observablehq-main{
     margin: 2rem !important;
     margin-top: calc(2rem + var(--header-height)) !important;
     min-height: calc( 100vh - (5rem + var(--header-height) + var(--footer-height) ) ) !important;
-    /*box-sizing: content-box;*/
 }
 
 h1 {
