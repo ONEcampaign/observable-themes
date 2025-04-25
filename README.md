@@ -4,8 +4,9 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 
 - A fully modular CSS design system
 - Dynamic, reusable header and footer generators for framework pages
-- ONE's color palette
+- ONE's color palettes
 - ONE logos in png and favicon formats
+- ONE fonts
 
 ---
 
@@ -16,7 +17,7 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 - Dynamic `generateHeader()` utility with custom page titles and scroll-triggered reactivity
 - Dynamic `generateHeader()` utility
 - `use-colors` module with ONE's colors and `setCustomColors()` utility to inject custom colors into css stylesheets
-- `use-iamges` module with access to ONE logos
+- `use-images` module with ONE logos
 - Ready for CDN or npm use
 
 ---
@@ -26,37 +27,116 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 Install via npm:
 
 ```bash
-npm install @one-data/observable-themes
+npm install @one-data/observable-themes@latest
 ```
 
-Or import directly from CDN:
+or directly import into an Observable Framework project:
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@one-data/observable-themes/styles/main.css">
+```js
+import {setCustomColors} from "npm:@one-data/observable-themes/use-colors"
 ```
 
 ---
 
 ## Usage in Observable Framework
 
-In your `observablehq.config.js`:
-Note that this would import all styling. 
+### Basic usage
+
+To include the header, footer, favicon and custom stylesheet in you Observable Framework project, your 
+`observablehq.config.js` should look as follows:
 
 ```js
-import { generateHeader } from "@one-data/observable-themes/header";
-import { generateFooter } from "@one-data/observable-themes/footer";
+import {generateHeader} from "@one-data/observable-themes/header";
+import {generateFooter} from "@one-data/observable-themes/footer";
+import {icon} from "@one-data/observable-themes/use-images";
 
 export default {
-    title: "App title",
-    header: generateHeader({title: "App title"}),
-    footer: generateFooter()
+    head: `<link rel="icon" href=${icon} type="image/png" sizes="32x32">`,
+    
+    header: generateHeader({title: "My project"}),
+    footer: generateFooter(),
+
+    style: "custom-stylesheet.css",
+    
+    // ... other attributes
 };
 ```
 
-The `generateHeader()` function takes a project title and returns the appropriate HTML:
+Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the modular CSS
+files provided by the package. For functional footer and header, you should at least import the following three:
+
+```css 
+/* custom-stylesheet.css */
+@import url("@one-data/observable-themes/styles/base.css");
+@import url("@one-data/observable-themes/styles/footer.css");
+@import url("@one-data/observable-themes/styles/header.css");
+```
+
+You may also import `main.css` to inject all the module CSS files:
+```css 
+/* custom-stylesheet.css */
+@import url("@one-data/observable-themes/styles/main.css");
+```
+
+### Color module
+
+`use-colors` includes a ONE Data colors and a variety of preset color palettes:
+
+- `ONEColors`: Object containing all ONE Data colors in different shades. They named as follows: `[hue][shade]`, where the darkest shade is 0. For example, `ONEColors.teal0` `ONEColors.orange5`.
+- `mainColor`: Returns `ONEColors.teal1`
+- `secondaryColors`: Object containing `ONEColors.orange1`, `ONEColors.navy0`, `ONEColors.purple1`, `ONEColors.blue1` and `ONEColors.yellow1`. They can be retrieved as follows: `secondaryColors.orange` or `secondaryColors.blue`.
+- `ONEPalette`: Object combining `mainColor` and `secondaryColors`. They can be retrieved as follows: `ONEPalette.teal`, `ONEPalette.purple`.
+- `greyScale`: Object containing `black`, `darkgrey`, `midGrey`, `lightGrey`, `white`. 
+
+The module also includes the function `applyONEPalette()`, which applies `ONEPalette` and `greyScale` to CSS variables.
 
 ```js
-generateHeader({ title: "My Awesome Dashboard" });
+import {applyONEPalette} from "@one-data/observable-themes/use-colors"
+
+applyONEPalette()
+```
+
+Once called, you may use the colors in your style sheet:
+
+```css
+/* custom-stylesheet.css */
+h1 {
+    background-color: var(--teal);
+    color: var(--midGrey)
+}
+```
+
+For more control over which CSS variables are applied, you can use `setCustomColors()`, which takes a custom color 
+palette inside an object and an optional prefix. 
+
+```js
+import {setCustomColors} from "@one-data/observable-themes/use-colors"
+
+const myPalette = { 
+    teal: '#00f5e1', 
+    orange: '#ff9900' 
+}
+
+setCustomColors(myPalette, {prefix: "custom"})
+```
+
+This will inject your palette into the stylesheet:
+
+```css
+p {
+    background-color: var(--custom-teal);
+    color: var(--custom-orange);
+}
+```
+
+### Images module
+
+`use-images` gives you access to ONE logos in favicon and high-resolution png form.
+
+```js
+import {logo} from "@one-data/observable-themes/use-images"
+
+html`<img src="${logo}" alt=“The ONE Campaign logo:a solid black circle with the word ‘ONE’ in bold white capital letters.”/>`
 ```
 
 ---
@@ -65,16 +145,20 @@ generateHeader({ title: "My Awesome Dashboard" });
 
 ```
 .
+├── assets/  
+│   ├── fonts/
+│   └── images/
 ├── styles/                # Modular CSS files
 │   ├── base.css
 │   ├── cards.css
 │   ├── code.css
+│   ├── fonts.css
 │   ├── footer.css
 │   ├── header.css
 │   ├── main.css
 │   ├── plot-theme.css
 │   ├── sidebar.css
-│   ├── tables.css
+│   ├── table-theme.css
 │   └── variables.css
 ├── header.js              # Inserts header with scroll behavior 
 ├── footer.js              # Inserts footer
