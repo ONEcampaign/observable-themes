@@ -25,9 +25,19 @@
   ],
   "keywords": [
     "css",
-    "Observable Framework"
+    "Observable Framework",
+    "observable",
+    "ui kit",
+    "design system"
   ],
-  "author": "Jorge Rivera",
+  "contributors": [
+    {
+      "name": "Jorge Rivera"
+    },
+    {
+      "name": "Miguel Haro Ruiz"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
