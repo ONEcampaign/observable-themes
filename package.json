@@ -1,6 +1,6 @@
 {
   "name": "@one-data/observable-themes",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "type": "module",
   "description": "Modular CSS style kit for Observable Framework projects",
   "main": "styles/main.css",
@@ -24,9 +24,20 @@
   ],
   "keywords": [
     "css",
-    "Observable Framework"
+    "observable",
+    "observablehq",
+    "observable framework",
+    "design system",
+    "ui kit"
   ],
-  "author": "Jorge Rivera",
+  "contributors": [
+    {
+      "name": "Jorge Rivera"
+    },
+    {
+      "name": "Miguel Haro Ruiz"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
