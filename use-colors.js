@@ -104,9 +104,7 @@ export const ONEColors = {
 
 };
 
-export const mainColor = {
-    teal: ONEColors.teal1
-}
+export const mainColor = ONEColors.teal1
 
 export const secondaryColors = {
     orange: ONEColors.orange1,
@@ -117,7 +115,7 @@ export const secondaryColors = {
 }
 
 export const ONEPalette = {
-    ...mainColor,
+    teal: mainColor,
     ...secondaryColors
 }
 
