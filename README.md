@@ -15,8 +15,8 @@ Modular CSS and utility JavaScript for styling [Observable Framework](https://ob
 - Drop-in `main.css` for a complete theme
 - Dynamic `generateHeader()` utility with custom page titles and scroll-triggered reactivity
 - Dynamic `generateHeader()` utility
-- `color-palette` module with ONE's colors and `setCustomColors()` utility to inject custom colors into css stylesheets
-- `use-logo` module with access to ONE logos
+- `use-colors` module with ONE's colors and `setCustomColors()` utility to inject custom colors into css stylesheets
+- `use-iamges` module with access to ONE logos
 - Ready for CDN or npm use
 
 ---
@@ -76,8 +76,8 @@ generateHeader({ title: "My Awesome Dashboard" });
 │   ├── sidebar.css
 │   ├── tables.css
 │   └── variables.css
-├── header.js              # Injects header with scroll behavior 
-├── footer.js              # Injects footer
+├── header.js              # Inserts header with scroll behavior 
+├── footer.js              # Inserts footer
 ├── use-colors.js          # ONE color palette and `setCustomColors` function
 ├── use-images.js          # ONE logos
 └── package.json
