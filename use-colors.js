@@ -4,7 +4,8 @@
  *
  * @param {Object} palette - An object where keys are variable names and values are CSS color strings.
  * @param {Object} [options] - Configuration options.
- * @param {string} [options.prefix=""] - A prefix to be added to each CSS variable name.
+ * @param {string} [options.prefix=""] - A prefix to be added to each CSS variable name followed by "-". If no prefix is
+ * provided, the resulting css variable with be the key preceded by "--".
  *
  * @example
  * setCustomColors({ teal: '#00f5e1', orange: '#ff9900' }, { prefix: "custom" });
@@ -19,7 +20,8 @@ export function setCustomColors(palette, { prefix = "" } = {}) {
 
     Object.entries(palette).forEach(([key, value]) => {
         if (value != null) {
-            root.style.setProperty(`--${prefix}-${key}`, value);
+            const variableName = prefix ? `--${prefix}-${key}` : `--${key}`;
+            root.style.setProperty(variableName, value);
         }
     });
 }
