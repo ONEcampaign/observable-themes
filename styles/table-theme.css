@@ -1,0 +1,23 @@
+:root {
+    --table-base-font-size: 0.75rem;
+}
+
+.table-title {
+    font: bold calc(var(--table-base-font-size) * 2.27) "Italian Plate", sans-serif !important;
+}
+.table-subtitle {
+    font: calc(var(--table-base-font-size) * 1.72) "Italian Plate", sans-serif !important;
+}
+
+table thead {
+    font: calc(var(--table-base-font-size) * 1.25) "Italian Plate", sans-serif !important;
+    line-height: 1.25 !important;
+}
+table tbody {
+    font: calc(var(--table-base-font-size) * 1.25) "Italian Plate", sans-serif !important;
+    line-height: 1.25 !important;
+}
+
+.table-source, .table-note {
+    font: var(--table-base-font-size) "Italian Plate", sans-serif !important;
+}
