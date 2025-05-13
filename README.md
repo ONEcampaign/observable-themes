@@ -62,20 +62,20 @@ export default {
 };
 ```
 
-Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the modular CSS
-files provided by the package. For functional footer and header, you should at least import the following three:
+Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the stylesheets
+provided by the package. You can import all CSS files via `main.css`:
 
-```css 
-/* custom-stylesheet.css */
-@import url("@one-data/observable-themes/styles/base.css");
-@import url("@one-data/observable-themes/styles/footer.css");
-@import url("@one-data/observable-themes/styles/header.css");
-```
-
-You may also import `main.css` to inject all the module CSS files:
 ```css 
 /* custom-stylesheet.css */
 @import url("@one-data/observable-themes/styles/main.css");
+```
+
+You may also import individual CSS modules for more control:
+```css 
+/* custom-stylesheet.css */
+@import url("@one-data/observable-themes/styles/header.css");
+@import url("@one-data/observable-themes/styles/footer.css");
+@import url("@one-data/observable-themes/styles/sidebar.css");
 ```
 
 ### Color module
@@ -149,13 +149,12 @@ html`<img src="${logo}" alt=“The ONE Campaign logo:a solid black circle with t
 │   ├── fonts/
 │   └── images/
 ├── styles/                # Modular CSS files
-│   ├── base.css
-│   ├── cards.css
 │   ├── code.css
 │   ├── fonts.css
 │   ├── footer.css
 │   ├── header.css
 │   ├── main.css
+│   ├── overrides.css
 │   ├── plot-theme.css
 │   ├── sidebar.css
 │   ├── table-theme.css
