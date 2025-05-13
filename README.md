@@ -58,24 +58,28 @@ export default {
 
     style: "custom-stylesheet.css",
     
-    // ... other attributes
+    // You should use attributes like toc, pager and sidebar to complete your configuration.
+    // Avoid defining a theme here. Instead, do so in you in your cutom stylesheet.     
 };
 ```
 
-Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the modular CSS
-files provided by the package. For functional footer and header, you should at least import the following three:
+Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the stylesheets
+provided by the package. You can import all CSS modules via `main.css`, as well as your Observable theme of choice:
 
-```css 
-/* custom-stylesheet.css */
-@import url("@one-data/observable-themes/styles/base.css");
-@import url("@one-data/observable-themes/styles/footer.css");
-@import url("@one-data/observable-themes/styles/header.css");
-```
-
-You may also import `main.css` to inject all the module CSS files:
 ```css 
 /* custom-stylesheet.css */
 @import url("@one-data/observable-themes/styles/main.css");
+
+@import url("observable:theme-air.css");
+@import url("observable:theme-alt.css");
+```
+
+You may also import individual CSS modules for more control:
+```css 
+/* custom-stylesheet.css */
+@import url("@one-data/observable-themes/styles/header.css");
+@import url("@one-data/observable-themes/styles/footer.css");
+@import url("@one-data/observable-themes/styles/sidebar.css");
 ```
 
 ### Color module
@@ -149,13 +153,12 @@ html`<img src="${logo}" alt=“The ONE Campaign logo:a solid black circle with t
 │   ├── fonts/
 │   └── images/
 ├── styles/                # Modular CSS files
-│   ├── base.css
-│   ├── cards.css
 │   ├── code.css
 │   ├── fonts.css
 │   ├── footer.css
 │   ├── header.css
 │   ├── main.css
+│   ├── overrides.css
 │   ├── plot-theme.css
 │   ├── sidebar.css
 │   ├── table-theme.css

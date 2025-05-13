@@ -1,26 +1,26 @@
 :root {
-    --table-base-font-size: 0.75rem;
+    --plot-base-font-size: 0.75rem;
 }
 
 .plot-title {
-    font: bold calc(var(--table-base-font-size) * 2.27) "Italian Plate", sans-serif !important;
+    font: bold calc(var(--plot-base-font-size) * 2.27) "Italian Plate", sans-serif !important;
 }
 .plot-subtitle {
-    font: calc(var(--table-base-font-size) * 1.72) "Italian Plate", sans-serif !important;
+    font: calc(var(--plot-base-font-size) * 1.72) "Italian Plate", sans-serif !important;
 }
 
 [aria-label="x-axis label"],
 [aria-label="x-axis tick label"],
 [aria-label="y-axis label"],
 [aria-label="y-axis tick label"] {
-    font: calc(var(--table-base-font-size) * 1.09) "Italian Plate", sans-serif !important;
+    font: calc(var(--plot-base-font-size) * 1.09) "Italian Plate", sans-serif !important;
 }
 
 
 .plot-source, .plot-note {
-    font: var(--table-base-font-size) "Italian Plate", sans-serif !important;
+    font: var(--plot-base-font-size) "Italian Plate", sans-serif !important;
 }
 
 [aria-label="tip"] {
-    font: calc(var(--table-base-font-size) * 1.15) "Italian Plate", sans-serif !important;
+    font: calc(var(--plot-base-font-size) * 1.15) "Italian Plate", sans-serif !important;
 }
