@@ -58,16 +58,20 @@ export default {
 
     style: "custom-stylesheet.css",
     
-    // ... other attributes
+    // You should use attributes like toc, pager and sidebar to complete your configuration.
+    // Avoid defining a theme here. Instead, do so in you in your cutom stylesheet.     
 };
 ```
 
 Additionally, you should include a `custom-stylesheet.css` in your root directory, where you can import the stylesheets
-provided by the package. You can import all CSS files via `main.css`:
+provided by the package. You can import all CSS modules via `main.css`, as well as your Observable theme of choice:
 
 ```css 
 /* custom-stylesheet.css */
 @import url("@one-data/observable-themes/styles/main.css");
+
+@import url("observable:theme-air.css");
+@import url("observable:theme-alt.css");
 ```
 
 You may also import individual CSS modules for more control:
