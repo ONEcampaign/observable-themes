@@ -1,7 +1,6 @@
 #observablehq-sidebar {
-    top: 4.5rem !important;
-    transition: top 0.5s ease !important;
     font: var(--font-small);
+    z-index: 5;
 }
 
 #observablehq-toc {
