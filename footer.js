@@ -12,28 +12,29 @@ export function generateFooter() {
         </div>
     </div>
     <script>
-const sidebar = document.getElementById("observablehq-sidebar");
-const footerContent = document.querySelector("#observablehq-footer .footer-content");
-
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    const rect = footerContent.getBoundingClientRect();
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-
-    // Calculate visible height of the footer content
-    const visibleHeight = Math.max(0, Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
-
-    // Clamp to avoid tiny jitter
-    sidebar.style.bottom = Math.round(visibleHeight) + 'px';
-  },
-  {
-    root: null,
-    threshold: Array.from({ length: 101 }, (_, i) => i / 100),
-  }
-);
-
-observer.observe(footerContent);
-
+      const sidebar = document.getElementById("observablehq-sidebar");
+      const footerContent = document.querySelector("#observablehq-footer .footer-content");
+    
+      if (sidebar && footerContent) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            const rect = footerContent.getBoundingClientRect();
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+            // Calculate visible height of the footer content
+            const visibleHeight = Math.max(0, Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
+    
+            // Clamp to avoid tiny jitter
+            sidebar.style.bottom = Math.round(visibleHeight) + 'px';
+          },
+          {
+            root: null,
+            threshold: Array.from({ length: 101 }, (_, i) => i / 100),
+          }
+        );
+    
+        observer.observe(footerContent);
+      }
     </script>
   `;
 }
