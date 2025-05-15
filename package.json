@@ -1,6 +1,6 @@
 {
   "name": "@one-data/observable-themes",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "type": "module",
   "description": "Modular CSS style kit for Observable Framework projects",
   "main": "styles/main.css",
