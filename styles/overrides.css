@@ -24,6 +24,10 @@
     margin: 0 auto 3rem !important; /*margin-bottom: 1rem;*/
 }
 
+#observablehq-toc ~ #observablehq-footer nav {
+    padding-right: 192px;
+}
+
 #observablehq-footer {
     margin-top: 6rem !important; /*margin-top: 10rem;*/
 }
