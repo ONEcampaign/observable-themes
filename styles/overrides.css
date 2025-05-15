@@ -27,3 +27,10 @@
 #observablehq-footer {
     margin-top: 6rem !important; /*margin-top: 10rem;*/
 }
+
+@media (min-width: calc(1200px + 4rem)) {
+    #observablehq-main {
+        max-width: 1200px;
+        margin: calc(var(--header-height) + 3rem) auto 1rem !important;
+    }
+}

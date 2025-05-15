@@ -1,10 +1,11 @@
 @import url("observablehq:default.css");
 
 @import url("./variables.css");
-@import url("./fonts.css");
 
-@import url("./table-theme.css");
-@import url("./plot-theme.css");
+/*@import url("./fonts.css");*/
+/*@import url("./table-theme.css");*/
+/*@import url("./plot-theme.css");*/
+
 @import url("./code.css");
 
 @import url("./sidebar.css");
