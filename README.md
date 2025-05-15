@@ -70,8 +70,8 @@ provided by the package. You can import all CSS modules via `main.css`, as well 
 /* custom-stylesheet.css */
 @import url("@one-data/observable-themes/styles/main.css");
 
-@import url("observable:theme-air.css");
-@import url("observable:theme-alt.css");
+@import url("observablehq:theme-air.css");
+@import url("observablehq:theme-alt.css");
 ```
 
 You may also import individual CSS modules for more control:
