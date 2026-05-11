@@ -1,0 +1,172 @@
+/* ================================================================
+   Typography tokens — single source of truth
+   ================================================================
+
+   Font families are CSS custom properties set on :root so they
+   are available everywhere via var(--font-*).
+
+   Semantic text presets are plain CSS classes — no Tailwind
+   processing required. Import this file directly and the classes
+   are ready to use.
+   ================================================================ */
+
+
+/* ── Design tokens ──────────────────────────────────────────────── */
+
+:root {
+  /* Font families */
+  --font-colfax:        "Colfax", Helvetica, sans-serif;
+  --font-italian-plate: "Italian Plate", Helvetica, sans-serif;
+
+  /* Colors */
+  --color-ink:     #0f172a;   /* slate-900 — text, interactive elements */
+  --color-surface: #ffffff;   /* white — backgrounds, thumb borders */
+}
+
+
+/* ── Text presets ───────────────────────────────────────────────── */
+
+/* App shell ---------------------------------------------------- */
+
+/* Page <h1> */
+.app-title {
+  font-family: var(--font-colfax);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  max-width: none;
+  color: inherit;
+  text-wrap: initial;
+}
+
+/* Introductory body copy */
+.plain-text {
+  font-family: var(--font-colfax);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  max-width: none;
+}
+
+/* "REFINE YOUR VIEW" and similar section headers */
+.section-header {
+  font-family: var(--font-colfax);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin: 0;
+  max-width: none;
+  color: inherit;
+  text-wrap: initial;
+}
+
+
+/* Navigation --------------------------------------------------- */
+
+/* Desktop nav links */
+.nav-text {
+  font-family: var(--font-colfax);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Mobile dropdown links */
+.nav-text-mobile {
+  font-family: var(--font-colfax);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+
+/* Visuals (ONEVisual) ------------------------------------------ */
+
+/* Chart card title (<h2>) */
+.plot-title {
+  font-family: var(--font-italian-plate);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0;
+  max-width: none;
+  color: inherit;
+  text-wrap: initial;
+}
+
+/* Chart card subtitle (<h3>) */
+.plot-subtitle {
+  font-family: var(--font-italian-plate);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin: 0;
+  max-width: none;
+  color: inherit;
+  font-weight: inherit;
+  text-wrap: initial;
+}
+
+/* Source, note, and footer text below charts */
+.plot-note {
+  font-family: var(--font-italian-plate);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* Reset Framework element styles inside .plot-note */
+.plot-note p,
+.plot-note figure,
+.plot-note table {
+  max-width: none;
+  margin: 0;
+}
+
+/* Reset Framework's a[href] color inside .plot-note (0,2,1 beats a[href] 0,1,1) */
+.plot-note a[href] {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+
+
+/* Controls ----------------------------------------------------- */
+
+/* Labels on dropdowns, toggles, range inputs */
+.control-label {
+  font-family: var(--font-colfax);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+}
+
+/* Currently selected value inside a control */
+.control-value {
+  font-family: var(--font-colfax);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+/* Individual items in a dropdown/select list */
+.control-option {
+  font-family: var(--font-colfax);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Download, action, and icon buttons */
+.button-text {
+  font-family: var(--font-colfax);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+/* Tooltip hint text (HintBadge) */
+.hint-text {
+  font-family: var(--font-colfax);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
