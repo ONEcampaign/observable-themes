@@ -1,34 +1,68 @@
 {
   "name": "@one-data/observable-themes",
-  "version": "0.6.7",
+  "version": "0.9.1",
   "type": "module",
-  "description": "Modular CSS style kit for Observable Framework projects",
-  "main": "styles/main.css",
+  "description": "Modular CSS, React components, and utilities for Observable Framework projects",
+  "main": "styles/index.css",
   "exports": {
     ".": {
-      "import": "./styles/main.css"
+      "import": "./styles/index.css"
     },
-    "./header": "./header.js",
-    "./footer": "./footer.js",
     "./styles/*": "./styles/*",
-    "./use-colors": "./use-colors.js",
-    "./use-images": "./use-images.js"
+    "./inputs": "./dist/inputs.js",
+    "./inputs/*": "./inputs/*",
+    "./charts": "./dist/charts.js",
+    "./charts/*": "./charts/*",
+    "./ui": "./dist/ui.js",
+    "./ui/*": "./ui/*",
+    "./utils": "./utils/index.js",
+    "./utils/*": "./utils/*",
+    "./colors": "./colors/index.js",
+    "./colors/*": "./colors/*",
+    "./brand": "./brand/index.js"
   },
   "files": [
     "assets/images/",
     "assets/fonts/",
-    "header.js",
-    "footer.js",
     "styles",
-    "use-colors.js",
-    "use-images.js"
+    "dist/",
+    "inputs/",
+    "charts/",
+    "ui/",
+    "utils/",
+    "colors/",
+    "brand/"
   ],
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build",
+    "docs:dev": "cd preview && npm run dev",
+    "docs:build": "cd preview && npm run build"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
   "keywords": [
     "css",
     "Observable Framework",
     "observable",
     "ui kit",
-    "design system"
+    "design system",
+    "react",
+    "components"
   ],
   "contributors": [
     {
