@@ -1,0 +1,72 @@
+/* ── Component-scoped browser resets ──────────────────────────── */
+/* Tailwind preflight is disabled in this package to avoid          */
+/* conflicting with Observable Framework's base styles. These rules */
+/* replicate the handful of preflight resets the components need.   */
+
+/* Font: prevent Framework's serif body font from bleeding into     */
+/* component descendants via inheritance. Each scoping class acts   */
+/* as a font-family boundary so that font:inherit on buttons picks  */
+/* up Colfax, not Source Serif.                                     */
+.dropdown,
+.toggle,
+.range-input,
+.range-input-mini,
+.multi-select,
+.segmented-toggle,
+.one-visual {
+  font-family: var(--font-colfax);
+}
+
+/* Input widths: compound selectors (0,2,1) override Framework's   */
+/* input[type=…] rules (0,1,1) which apply a fixed 240px width.    */
+.dropdown input[type="text"],
+.multi-select input[type="text"] {
+  width: 100%;
+  font-family: var(--font-colfax);
+}
+
+.range-input input[type="number"] {
+  width: 5rem; /* matches w-20 intent; beats Framework's 240px */
+}
+
+.range-input-mini input[type="number"] {
+  width: auto;
+}
+
+/* Lists */
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+table ul,
+table ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.dropdown a,
+table a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Option-list buttons (not the trigger, which has explicit Tailwind classes) */
+.dropdown [role="listbox"] button {
+  appearance: none;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+
+/* All component buttons: font inheritance (not guaranteed without preflight) */
+.dropdown button,
+.toggle button {
+  font: inherit;
+}

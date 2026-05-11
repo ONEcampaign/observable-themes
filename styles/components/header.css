@@ -1,0 +1,24 @@
+/* Header */
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .app-header {
+    gap: 2rem;
+  }
+}
+
+.app-header .title-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.app-header .description {
+  max-width: 600px;
+}
