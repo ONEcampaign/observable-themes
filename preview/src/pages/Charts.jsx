@@ -172,6 +172,8 @@ const plotFn = (width) => Plot.plot({
             options={VIZ_OPTIONS}
             value={vizType}
             onChange={setVizType}
+            disabled={true}
+            disabledReason={"porque me salio de ahi"}
           />
         </div>
         <div className="demo-block" style={{ padding: '1rem 0.5rem' }}>

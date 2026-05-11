@@ -163,18 +163,6 @@
   margin-bottom: 3.5rem;
 }
 
-.hero-badge {
-  display: inline-block;
-  background: #e0f2fe;
-  color: #0369a1;
-  font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  margin: 0 0 1rem;
-}
-
 .preview-note {
   font-family: var(--font-colfax, sans-serif);
   font-size: 0.875rem;

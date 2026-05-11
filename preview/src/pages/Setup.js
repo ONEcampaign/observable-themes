@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../components/Section.jsx";
 import CodeBlock from "../components/CodeBlock.jsx";
 function Setup() {
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { className: "preview-hero" }, /* @__PURE__ */ React.createElement("p", { className: "hero-badge" }, "v0.9.0"), /* @__PURE__ */ React.createElement("h1", { className: "page-title" }, "Observable Themes"), /* @__PURE__ */ React.createElement("p", { className: "page-desc" }, "Modular CSS, React components, and utilities for building data-driven reports with Observable Framework. Includes input controls, chart containers, a color system, and typography \u2014 maintained by ONE Data.")), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { className: "preview-hero" }, /* @__PURE__ */ React.createElement("h1", { className: "page-title" }, "Observable Themes"), /* @__PURE__ */ React.createElement("p", { className: "page-desc" }, "Modular CSS, React components, and utilities for building data-driven reports with Observable Framework. Includes input controls, chart containers, a color system, and typography \u2014 maintained by ONE Data.")), /* @__PURE__ */ React.createElement(
     Section,
     {
       title: "Installation",

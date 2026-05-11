@@ -120,6 +120,7 @@ function Charts() {
       },
       /* @__PURE__ */ React.createElement(AutoPlot, { data: FUNDING_DATA, plotFn: barPlot })
     ),
+    /* @__PURE__ */ React.createElement("br", null),
     /* @__PURE__ */ React.createElement(CodeBlock, { code: `
 import * as Plot from "@observablehq/plot"
 import { ONEVisual, AutoPlot } from "npm:@one-data/observable-themes/charts"
@@ -161,7 +162,9 @@ const plotFn = (width) => Plot.plot({
         label: "Chart type",
         options: VIZ_OPTIONS,
         value: vizType,
-        onChange: setVizType
+        onChange: setVizType,
+        disabled: true,
+        disabledReason: "porque me salio de ahi"
       }
     )),
     /* @__PURE__ */ React.createElement("div", { className: "demo-block", style: { padding: "1rem 0.5rem" } }, /* @__PURE__ */ React.createElement(

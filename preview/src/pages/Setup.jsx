@@ -6,7 +6,6 @@ export default function Setup() {
   return (
     <>
       <div className="preview-hero">
-        <p className="hero-badge">v0.9.0</p>
         <h1 className="page-title">Observable Themes</h1>
         <p className="page-desc">
           Modular CSS, React components, and utilities for building data-driven
