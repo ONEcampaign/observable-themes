@@ -72,7 +72,7 @@ export function SegmentedToggle({
               disabled={disabled}
               aria-disabled={disabled}
               onClick={() => handleSelect(option.value)}
-              className={`segment${isActive ? " is-active" : ""}`}
+              className={`control-value segment${isActive ? " is-active" : ""}`}
             >
               {option.label}
             </button>

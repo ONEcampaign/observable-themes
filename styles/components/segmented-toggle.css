@@ -2,6 +2,7 @@
 
 .segmented-toggle {
   display: block;
+  max-width: 25rem;
 }
 
 .segmented-toggle.is-disabled {
@@ -43,7 +44,7 @@
   border: none;
   background: none;
   color: #0f172a;
-  font: inherit;
+  /*font: inherit;*/
 }
 
 @media (min-width: 1024px) {
