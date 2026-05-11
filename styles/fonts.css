@@ -1,32 +1,8 @@
-/* Colfax */
-/* Regular */
-@font-face {
-    font-family: 'Colfax';
-    font-weight: 400;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Regular.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Regular.woff') format('woff');
-    font-display: swap;
-}
-/* Bold */
-@font-face {
-    font-family: 'Colfax';
-    font-weight: 700;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Bold.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Bold.woff') format('woff');
-    font-display: swap;
-}
-/* Light */
-@font-face {
-    font-family: 'Colfax';
-    font-weight: 300;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Light.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Light.woff') format('woff');
-    font-display: swap;
-}
-/* Thin */
+/* ============================================================
+   Colfax
+   ============================================================ */
+
+/* Thin — 100 */
 @font-face {
     font-family: 'Colfax';
     font-weight: 100;
@@ -36,26 +12,161 @@
     font-display: swap;
 }
 
-/* Italian Plate */
-/* Regular */
+/* Thin Italic — 100 */
 @font-face {
-    font-family: 'Italian Plate';
+    font-family: 'Colfax';
+    font-weight: 100;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-ThinItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-ThinItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Light — 300 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Light.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Light.woff') format('woff');
+    font-display: swap;
+}
+
+/* Light Italic — 300 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 300;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-LightItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-LightItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Regular — 400 */
+@font-face {
+    font-family: 'Colfax';
     font-weight: 400;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Regular.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Regular.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Regular.woff') format('woff');
     font-display: swap;
 }
-/* Bold */
+
+/* Regular Italic — 400 */
 @font-face {
-    font-family: 'Italian Plate';
+    font-family: 'Colfax';
+    font-weight: 400;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-RegularItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-RegularItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Medium — 500 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+/* Medium Italic — 500 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 500;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-MediumItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-MediumItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Bold — 700 */
+@font-face {
+    font-family: 'Colfax';
     font-weight: 700;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Bold.woff') format('woff');
     font-display: swap;
 }
-/* Light */
+
+/* Bold Italic — 700 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 700;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-BoldItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-BoldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Black — 900 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Black.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-Black.woff') format('woff');
+    font-display: swap;
+}
+
+/* Black Italic — 900 */
+@font-face {
+    font-family: 'Colfax';
+    font-weight: 900;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-BlackItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/Colfax-BlackItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* ============================================================
+   Italian Plate
+   ============================================================ */
+
+/* Thin — 100 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Thin.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Thin.woff') format('woff');
+    font-display: swap;
+}
+
+/* Thin Italic — 100 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 100;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ThinItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ThinItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Extralight — 200 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Extralight.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Extralight.woff') format('woff');
+    font-display: swap;
+}
+
+/* Extralight Italic — 200 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 200;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ExtralightItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ExtralightItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Light — 300 */
 @font-face {
     font-family: 'Italian Plate';
     font-weight: 300;
@@ -64,12 +175,147 @@
     url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Light.woff') format('woff');
     font-display: swap;
 }
-/* Thin */
+
+/* Light Italic — 300 */
 @font-face {
     font-family: 'Italian Plate';
-    font-weight: 100;
+    font-weight: 300;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-LightItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-LightItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Regular — 400 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 400;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Thin.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Thin.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+/* Italic — 400 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 400;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Italic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Italic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Medium — 500 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+/* Medium Italic — 500 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 500;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-MediumItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-MediumItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Demibold — 600 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Demibold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Demibold.woff') format('woff');
+    font-display: swap;
+}
+
+/* Demibold Italic — 600 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 600;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-DemiboldItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-DemiboldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Bold — 700 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+/* Bold Italic — 700 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 700;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-BoldItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-BoldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Extrabold — 800 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Extrabold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Extrabold.woff') format('woff');
+    font-display: swap;
+}
+
+/* Extrabold Italic — 800 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 800;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ExtraboldItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-ExtraboldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* Black — 900 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Black.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Black.woff') format('woff');
+    font-display: swap;
+}
+
+/* Black Italic — 900 */
+@font-face {
+    font-family: 'Italian Plate';
+    font-weight: 900;
+    font-style: italic;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-BlackItalic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-BlackItalic.woff') format('woff');
+    font-display: swap;
+}
+
+/* ============================================================
+   Italian Plate No2 Left  (right-angled oblique variant)
+   ============================================================ */
+
+/* Black — 900 */
+@font-face {
+    font-family: 'Italian Plate No2 Left';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2Left-Black.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2Left-Black.woff') format('woff');
     font-display: swap;
 }
