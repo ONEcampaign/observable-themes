@@ -1,0 +1,109 @@
+/* ToggleSwitch and ToggleSwitchMini */
+
+/* ── ToggleSwitch (full size) ── */
+.toggle .label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.toggle .row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toggle .row .control-value {
+  text-transform: uppercase;
+}
+
+.toggle .track {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: #0f172a;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  transition: background-color 200ms;
+  flex-shrink: 0;
+}
+
+.toggle .track.is-disabled {
+  background: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.toggle .thumb {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 200ms;
+}
+
+.toggle .thumb.is-right {
+  transform: translateX(1.5rem);
+}
+
+/* ── ToggleSwitchMini (compact horizontal layout) ── */
+.toggle-mini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.toggle-mini .label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.toggle-mini .row {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.toggle-mini .track {
+  position: relative;
+  width: 2.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background: #0f172a;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  transition: background-color 200ms;
+  flex-shrink: 0;
+}
+
+.toggle-mini .track.is-disabled {
+  background: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.toggle-mini .thumb {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 200ms;
+}
+
+.toggle-mini .thumb.is-right {
+  transform: translateX(1rem);
+}
