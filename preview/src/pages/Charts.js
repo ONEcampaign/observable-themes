@@ -162,9 +162,7 @@ const plotFn = (width) => Plot.plot({
         label: "Chart type",
         options: VIZ_OPTIONS,
         value: vizType,
-        onChange: setVizType,
-        disabled: true,
-        disabledReason: "porque me salio de ahi"
+        onChange: setVizType
       }
     )),
     /* @__PURE__ */ React.createElement("div", { className: "demo-block", style: { padding: "1rem 0.5rem" } }, /* @__PURE__ */ React.createElement(
