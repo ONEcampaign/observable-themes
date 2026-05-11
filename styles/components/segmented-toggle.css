@@ -5,9 +5,8 @@
   max-width: 25rem;
 }
 
-.segmented-toggle.is-disabled {
+.segmented-toggle .is-disabled {
   cursor: not-allowed;
-  opacity: 0.15;
 }
 
 .segmented-toggle .label-row {
@@ -15,6 +14,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.segments.is-disabled {
+  opacity: 0.2;
 }
 
 .segmented-toggle .segments {
@@ -79,7 +82,7 @@
 
 .segmented-toggle .tooltip {
   position: absolute;
-  bottom: calc(100% + 0.5rem);
+  bottom: calc(100% - 1rem);
   left: 50%;
   transform: translateX(-50%);
   max-width: 12.5rem;

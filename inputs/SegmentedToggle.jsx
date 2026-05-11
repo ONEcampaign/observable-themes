@@ -54,47 +54,45 @@ export function SegmentedToggle({
     onChange?.(nextValue)
   }
 
-  const renderToggle = () => (
-    <div className={disabled ? "is-disabled" : ""}>
-      {label && (
-        <label className="control-label label-row">
-          {label}
-          {hint && <HintBadge hint={hint} />}
-        </label>
-      )}
-      <div className="segments">
-        {normalized.map((option) => {
-          const isActive = option.value === activeValue
-          return (
-            <button
-              type="button"
-              key={option.value}
-              disabled={disabled}
-              aria-disabled={disabled}
-              onClick={() => handleSelect(option.value)}
-              className={`control-value segment${isActive ? " is-active" : ""}`}
-            >
-              {option.label}
-            </button>
-          )
-        })}
-      </div>
+  const segments = (
+    <div className={`segments${disabled ? " is-disabled" : ""}`}>
+      {normalized.map((option) => {
+        const isActive = option.value === activeValue
+        return (
+          <button
+            type="button"
+            key={option.value}
+            disabled={disabled}
+            aria-disabled={disabled}
+            onClick={() => handleSelect(option.value)}
+            className={`control-value segment${isActive ? " is-active" : ""}`}
+          >
+            {option.label}
+          </button>
+        )
+      })}
     </div>
   )
 
-  if (disabled && disabledReason) {
-    return (
-      <div className={`segmented-toggle ${className}`}>
-        <div className="tooltip-wrap">
-          {renderToggle()}
-          <div className="tooltip">
-            {disabledReason}
-            <div className="tooltip-arrow" />
+  return (
+    <div className={`segmented-toggle ${className}`}>
+      <div className={disabled ? "is-disabled" : ""}>
+        {label && (
+          <label className="control-label label-row">
+            {label}
+            {hint && <HintBadge hint={hint} />}
+          </label>
+        )}
+        {disabled && disabledReason ? (
+          <div className="tooltip-wrap">
+            {segments}
+            <div className="tooltip">
+              {disabledReason}
+              <div className="tooltip-arrow" />
+            </div>
           </div>
-        </div>
+        ) : segments}
       </div>
-    )
-  }
-
-  return <div className={`segmented-toggle ${className}`}>{renderToggle()}</div>
+    </div>
+  )
 }
