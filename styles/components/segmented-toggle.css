@@ -82,7 +82,7 @@
 
 .segmented-toggle .tooltip {
   position: absolute;
-  bottom: calc(100% - 1rem);
+  bottom: calc(100% + .5rem);
   left: 50%;
   transform: translateX(-50%);
   max-width: 12.5rem;
