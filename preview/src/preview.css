@@ -1,0 +1,304 @@
+/* Preview-specific styles — complement the package CSS without overriding it */
+
+/* ── Layout ────────────────────────────────────────────────────────────────── */
+
+.preview-wrapper {
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.preview-wrapper > * + * {
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .preview-wrapper {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .preview-wrapper {
+    padding: 5rem 3rem;
+  }
+}
+
+/* ── Page chrome ───────────────────────────────────────────────────────────── */
+
+.page-title {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  color: var(--color-ink, #0f172a);
+}
+
+.page-desc {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 1.05rem;
+  color: #475569;
+  margin: 0 0 3rem;
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+/* ── Sections ──────────────────────────────────────────────────────────────── */
+
+.preview-section {
+  margin-bottom: 4rem;
+}
+
+.preview-section > .section-header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.preview-section-desc {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 0 0 1.5rem;
+  /*max-width: 70ch;*/
+  line-height: 1.6;
+}
+
+/* ── Demo containers ───────────────────────────────────────────────────────── */
+
+.demo-block {
+  width: 100%;
+  padding: 1.5rem 0 ;
+  margin-bottom: 0.75rem;
+}
+
+.demo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-inline-label {
+  color: #475569;
+  white-space: nowrap;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-label {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  margin: 0 0 0.5rem;
+}
+
+.demo-value {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 1rem 0 0;
+}
+
+/* ── Code blocks ───────────────────────────────────────────────────────────── */
+
+.code-block {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.code-block pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+.code-block code {
+  font-family: inherit;
+}
+
+.code-block-copy {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: rgba(255 255 255 / 0.08);
+  color: #94a3b8;
+  border: none;
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+  font-family: var(--font-colfax, sans-serif);
+  transition: background 0.15s, color 0.15s;
+}
+
+.code-block-copy:hover {
+  background: rgba(255 255 255 / 0.16);
+  color: #e2e8f0;
+}
+
+/* ── Hero (Home page) ──────────────────────────────────────────────────────── */
+
+.preview-hero {
+  margin-bottom: 3.5rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin: 0 0 1rem;
+}
+
+.preview-note {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+/* ── Color swatches ────────────────────────────────────────────────────────── */
+
+.color-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.color-row {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.color-name {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  width: 76px;
+  flex-shrink: 0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.color-swatch {
+  flex: 1;
+  height: 44px;
+  border-radius: 4px;
+  position: relative;
+  cursor: default;
+  transition: transform 0.1s ease, z-index 0s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.color-swatch:hover {
+  transform: scaleY(1.2);
+  z-index: 1;
+}
+
+.swatch-label {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.6rem;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.color-swatch:hover .swatch-label {
+  opacity: 1;
+}
+
+.swatch-label.light { color: rgba(255 255 255 / 0.9); }
+.swatch-label.dark  { color: rgba(0 0 0 / 0.6); }
+
+/* ── Palette tiles ─────────────────────────────────────────────────────────── */
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.palette-tile-swatch {
+  height: 72px;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+.palette-tile-name {
+  font-family: var(--font-colfax, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #334155;
+  display: block;
+  text-transform: capitalize;
+}
+
+.palette-tile-hex {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  display: block;
+}
+
+/* ── Typography specimens ──────────────────────────────────────────────────── */
+
+.type-specimens {
+  margin-bottom: 0.75rem;
+}
+
+.type-specimen {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.type-specimen:first-child {
+  border-top: 1px solid #f1f5f9;
+}
+
+.type-meta {
+  display: block;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 0.4rem;
+}
+
+.text-class-row p {
+  margin: 0;
+}
