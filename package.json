@@ -1,6 +1,6 @@
 {
   "name": "@one-data/observable-themes",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "type": "module",
   "description": "Modular CSS, React components, and utilities for Observable Framework projects",
   "main": "styles/index.css",
