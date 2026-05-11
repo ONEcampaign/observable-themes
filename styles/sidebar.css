@@ -1,9 +1,0 @@
-#observablehq-sidebar {
-    font: var(--font-small);
-    z-index: 5;
-}
-
-#observablehq-toc {
-    font: var(--font-small);
-    color: var(--theme-foreground-muted);
-}
