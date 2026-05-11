@@ -130,6 +130,7 @@ export default function Charts() {
         >
           <AutoPlot data={FUNDING_DATA} plotFn={barPlot} />
         </ONEVisual>
+        <br/>
         <CodeBlock code={`
 import * as Plot from "@observablehq/plot"
 import { ONEVisual, AutoPlot } from "npm:@one-data/observable-themes/charts"

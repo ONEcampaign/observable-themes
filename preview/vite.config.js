@@ -13,4 +13,9 @@ export default defineConfig({
       '@pkg': path.resolve(__dirname, '..'),
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['xlsx'],
+    },
+  },
 })
