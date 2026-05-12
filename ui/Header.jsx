@@ -8,15 +8,16 @@ import { NavMenu } from "./NavMenu.js"
  * @param {string} [props.appDescription] - Short description shown below the title row; basic HTML (e.g. `<b>`, `<a>`) is supported
  * @param {{ id: string, label: string, href: string }[]} [props.navItems=[]] - Navigation links
  * @param {string} [props.currentPage] - The `id` of the currently active page
+ * @param {string} [props.descriptionMaxWidth] - Custom max-width for the description (e.g. `"800px"`); defaults to `600px`
  */
-export function Header({ appTitle, appDescription, navItems, currentPage }) {
+export function Header({ appTitle, appDescription, navItems, currentPage, descriptionMaxWidth }) {
   return (
     <div className="app-header">
       <div className="title-row">
         <h1 className="app-title">{appTitle}</h1>
         <NavMenu navItems={navItems} currentPage={currentPage} />
       </div>
-      <div className="description">
+      <div className="description" style={descriptionMaxWidth ? { maxWidth: descriptionMaxWidth } : undefined}>
         <p className="plain-text" dangerouslySetInnerHTML={{ __html: appDescription }} />
       </div>
     </div>
