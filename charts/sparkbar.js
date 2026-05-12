@@ -1,5 +1,11 @@
-import {html} from "htl"
 import {formatValue} from "../utils/format.js"
+
+function html(strings, ...values) {
+  const markup = strings.reduce((acc, str, i) => acc + (values[i - 1] ?? "") + str)
+  const template = document.createElement("template")
+  template.innerHTML = markup.trim()
+  return template.content.firstElementChild
+}
 
 const MID_GREY = "#646464"
 const LIGHT_GREY = "#E8E8E8"

@@ -571,9 +571,6 @@ function ONEVisual({
   )));
 }
 
-// charts/sparkbar.js
-import { html } from "htl";
-
 // utils/format.js
 function formatValue(value) {
   if (value == null) {
@@ -593,6 +590,12 @@ function formatValue(value) {
 }
 
 // charts/sparkbar.js
+function html(strings, ...values) {
+  const markup = strings.reduce((acc, str, i) => acc + (values[i - 1] ?? "") + str);
+  const template = document.createElement("template");
+  template.innerHTML = markup.trim();
+  return template.content.firstElementChild;
+}
 var MID_GREY = "#646464";
 var LIGHT_GREY = "#E8E8E8";
 function sparkbar(fillColor, alignment, globalMin, globalMax, formatter = null) {
