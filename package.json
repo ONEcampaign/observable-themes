@@ -1,6 +1,6 @@
 {
   "name": "@one-data/observable-themes",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "type": "module",
   "description": "Modular CSS, React components, and utilities for Observable Framework projects",
   "main": "styles/index.css",
@@ -48,6 +48,7 @@
     "docs:build": "cd preview && npm run build"
   },
   "dependencies": {
+    "htl": "^0.3.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
