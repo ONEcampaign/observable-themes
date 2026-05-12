@@ -105,10 +105,10 @@ async function downloadXLSX(data, filename) {
 var FONT_REGULAR_URL = "https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Regular.woff2";
 var FONT_BOLD_URL = "https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff2";
 var COLORS = {
-  title: "#0f172a",
-  subtitle: "#64748b",
-  source: "#64748b",
-  note: "#64748b",
+  title: "#000000",
+  subtitle: "#000000",
+  source: "#3d3d3d",
+  note: "#3d3d3d",
   bg: "#ffffff"
 };
 var FONT_FAMILY = "'Italian Plate', Helvetica, sans-serif";
@@ -139,14 +139,14 @@ async function toEmbeddableDataURI(src) {
     return null;
   }
 }
-function stripHTML(html) {
+function stripHTML(html2) {
   const tmp = document.createElement("div");
-  tmp.innerHTML = html;
+  tmp.innerHTML = html2;
   return tmp.textContent || tmp.innerText || "";
 }
-function parseHTMLSegments(html) {
+function parseHTMLSegments(html2) {
   const div = document.createElement("div");
-  div.innerHTML = html;
+  div.innerHTML = html2;
   const segments = [];
   function walk(node, inheritedColor, inheritedWeight) {
     if (node.nodeType === 3) {
@@ -570,8 +570,124 @@ function ONEVisual({
     }
   )));
 }
+
+// charts/sparkbar.js
+import { html } from "htl";
+
+// utils/format.js
+function formatValue(value) {
+  if (value == null) {
+    return { value: 0, label: "0" };
+  }
+  const roundedValue = parseFloat(value.toFixed(2));
+  let label;
+  if (value === 0) {
+    label = "< 0.01";
+  } else {
+    label = roundedValue.toLocaleString("en-US", {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 2
+    });
+  }
+  return { value: roundedValue, label };
+}
+
+// charts/sparkbar.js
+var MID_GREY = "#646464";
+var LIGHT_GREY = "#E8E8E8";
+function sparkbar(fillColor, alignment, globalMin, globalMax, formatter = null) {
+  const range = Math.abs(globalMax) + Math.abs(globalMin);
+  const zeroPosition = Math.abs(globalMin) / range;
+  return (x) => {
+    const barWidth = Math.min(100, 100 * Math.abs(x) / range);
+    const barStyle = alignment === "center" ? `
+          position: absolute;
+          height: 80%;
+          top: 10%;
+          background: ${hex2rgb(fillColor, 0.4)};
+          width: ${barWidth}%;
+          ${x >= 0 ? `left: ${zeroPosition * 100}%;` : `right: ${(1 - zeroPosition) * 100}%;`}
+          box-sizing: border-box;
+          overflow: hidden;
+        ` : `
+          position: absolute;
+          height: 90%;
+          top: 5%;
+          background: ${hex2rgb(fillColor, 0.4)};
+          width: ${barWidth}%;
+          ${alignment === "right" ? "right: 0;" : "left: 0;"}
+          box-sizing: border-box;
+          overflow: hidden;
+        `;
+    const zeroLineStyle = alignment === "center" ? `
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          background: ${hex2rgb(MID_GREY, 0.5)};
+          left: ${zeroPosition * 100}%;
+          box-sizing: border-box;
+        ` : alignment === "right" ? `
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background: ${hex2rgb(MID_GREY, 0.5)};
+            right: 0;
+            box-sizing: border-box;
+          ` : `
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background: ${hex2rgb(MID_GREY, 0.5)};
+            left: 0;
+            box-sizing: border-box;
+          `;
+    const textAlignment = alignment === "center" ? "center" : alignment === "right" ? "end" : "start";
+    return html`
+      <div style="
+        position: relative;
+        width: 100%;
+        height: 1.25rem;
+        background: none;
+        display: flex;
+        z-index: 0;
+        align-items: center;
+        justify-content: ${textAlignment};
+        box-sizing: border-box;
+        overflow: hidden;">
+        <div style="${barStyle}"></div>
+        <div style="${zeroLineStyle}"></div>
+        <span style="
+          position: relative;
+          z-index: 1;
+          font: 1rem 'Italian Plate', sans-serif;
+          color: black;
+          text-shadow: .5px .5px 0 ${LIGHT_GREY};
+          padding: 0 3px;">
+          ${formatter ? formatter(x) : formatValue(x).label}
+        </span>
+      </div>`;
+  };
+}
+function hex2rgb(hex, alpha = 1) {
+  hex = hex.replace(/^#/, "");
+  let r, g, b, a = 1;
+  if (hex.length === 6) {
+    r = parseInt(hex.slice(0, 2), 16);
+    g = parseInt(hex.slice(2, 4), 16);
+    b = parseInt(hex.slice(4, 6), 16);
+  } else if (hex.length === 8) {
+    r = parseInt(hex.slice(0, 2), 16);
+    g = parseInt(hex.slice(2, 4), 16);
+    b = parseInt(hex.slice(4, 6), 16);
+    a = parseInt(hex.slice(6, 8), 16) / 255;
+  } else {
+    throw new Error("Invalid hex format. Use #RRGGBB or #RRGGBBAA.");
+  }
+  return `rgba(${r}, ${g}, ${b}, ${a * alpha})`;
+}
 export {
   AutoPlot,
   AutoTable,
-  ONEVisual
+  ONEVisual,
+  sparkbar
 };

@@ -120,8 +120,8 @@ function NavMenu({ navItems, currentPage }) {
 }
 
 // ui/Header.js
-function Header({ appTitle, appDescription, navItems, currentPage }) {
-  return /* @__PURE__ */ React2.createElement("div", { className: "app-header" }, /* @__PURE__ */ React2.createElement("div", { className: "title-row" }, /* @__PURE__ */ React2.createElement("h1", { className: "app-title" }, appTitle), /* @__PURE__ */ React2.createElement(NavMenu, { navItems, currentPage })), /* @__PURE__ */ React2.createElement("div", { className: "description" }, /* @__PURE__ */ React2.createElement("p", { className: "plain-text", dangerouslySetInnerHTML: { __html: appDescription } })));
+function Header({ appTitle, appDescription, navItems, currentPage, descriptionMaxWidth }) {
+  return /* @__PURE__ */ React2.createElement("div", { className: "app-header" }, /* @__PURE__ */ React2.createElement("div", { className: "title-row" }, /* @__PURE__ */ React2.createElement("h1", { className: "app-title" }, appTitle), /* @__PURE__ */ React2.createElement(NavMenu, { navItems, currentPage })), /* @__PURE__ */ React2.createElement("div", { className: "description", style: descriptionMaxWidth ? { maxWidth: descriptionMaxWidth } : void 0 }, /* @__PURE__ */ React2.createElement("p", { className: "plain-text", dangerouslySetInnerHTML: { __html: appDescription } })));
 }
 
 // ui/KPICards.js
