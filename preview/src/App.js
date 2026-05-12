@@ -34,7 +34,7 @@ function App() {
     Header,
     {
       appTitle: "Observable Themes",
-      appDescription: "Modular CSS, React components, and utilities for Observable Framework projects.",
+      appDescription: "Modular CSS, React components, and utilities for Observable Framework projects. Includes input controls, chart containers, a color system, and typography.",
       navItems: NAV_ITEMS,
       currentPage
     }
