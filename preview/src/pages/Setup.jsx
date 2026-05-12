@@ -5,15 +5,6 @@ import CodeBlock from '../components/CodeBlock.jsx'
 export default function Setup() {
   return (
     <>
-      <div className="preview-hero">
-        <h1 className="page-title">Observable Themes</h1>
-        <p className="page-desc">
-          Modular CSS, React components, and utilities for building data-driven
-          reports with Observable Framework. Includes input controls, chart
-          containers, a color system, and typography — maintained by ONE Data.
-        </p>
-      </div>
-
       <Section
         title="Installation"
         description="Install the package from npm."
