@@ -22,10 +22,10 @@ const FONT_BOLD_URL =
   "https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/fonts/ItalianPlateNo2-Bold.woff2"
 
 const COLORS = {
-  title: "#0f172a",
-  subtitle: "#64748b",
-  source: "#64748b",
-  note: "#64748b",
+  title: "#000000",
+  subtitle: "#000000",
+  source: "#3d3d3d",
+  note: "#3d3d3d",
   bg: "#ffffff"
 }
 
