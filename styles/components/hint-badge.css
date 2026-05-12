@@ -32,7 +32,7 @@
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   pointer-events: none;
-  white-space: nowrap;
+  white-space: normal;
   z-index: 10;
   display: none;
 }
