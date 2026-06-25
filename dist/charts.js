@@ -4,11 +4,24 @@ function AutoPlot({ data, plotFn }) {
   const ref = React.useRef(null);
   const [width, setWidth] = React.useState(0);
   React.useEffect(() => {
-    if (!ref.current) return;
-    const observer = new ResizeObserver((entries) => setWidth(entries[0].contentRect.width));
-    observer.observe(ref.current);
-    setWidth(ref.current.clientWidth);
-    return () => observer.disconnect();
+    const node = ref.current;
+    if (!node) return;
+    let frame = 0;
+    let last = 0;
+    const update = (w) => {
+      const rounded = Math.round(w);
+      if (rounded === last) return;
+      last = rounded;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => setWidth(rounded));
+    };
+    const observer = new ResizeObserver((entries) => update(entries[0].contentRect.width));
+    observer.observe(node);
+    update(node.clientWidth);
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, []);
   React.useEffect(() => {
     const node = ref.current;
@@ -492,7 +505,7 @@ async function downloadPlotAsPng(plotContainer, { title, subtitle, source, note,
 // brand/index.js
 var baseURL = "https://cdn.jsdelivr.net/npm/@one-data/observable-themes@latest/assets/images/";
 var logo = baseURL + "logo.png";
-var icon = baseURL + "icon.png";
+var icon = baseURL + "favicon.ico";
 
 // charts/ONEVisual.js
 function ONEVisual({

@@ -14,11 +14,24 @@ export function AutoPlot({data, plotFn}) {
   const [width, setWidth] = React.useState(0)
 
   React.useEffect(() => {
-    if (!ref.current) return
-    const observer = new ResizeObserver(entries => setWidth(entries[0].contentRect.width))
-    observer.observe(ref.current)
-    setWidth(ref.current.clientWidth)
-    return () => observer.disconnect()
+    const node = ref.current
+    if (!node) return
+    let frame = 0
+    let last = 0
+    const update = w => {
+      const rounded = Math.round(w)
+      if (rounded === last) return            // ignore sub-pixel jitter (e.g. Windows fractional display scaling)
+      last = rounded
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => setWidth(rounded))  // coalesce resize bursts to one render per frame
+    }
+    const observer = new ResizeObserver(entries => update(entries[0].contentRect.width))
+    observer.observe(node)
+    update(node.clientWidth)
+    return () => {
+      cancelAnimationFrame(frame)
+      observer.disconnect()
+    }
   }, [])
 
   React.useEffect(() => {
