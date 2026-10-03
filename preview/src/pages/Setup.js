@@ -39,6 +39,24 @@ import { DropdownMenu, SegmentedToggle } from "npm:@one-data/observable-themes/i
 import { ONEVisual, AutoPlot } from "npm:@one-data/observable-themes/charts"
 import { ONEColors, ONEPalette } from "npm:@one-data/observable-themes/colors"
 import { formatValue, downloadXLSX } from "npm:@one-data/observable-themes/utils"` })
+  ), /* @__PURE__ */ React.createElement(
+    Section,
+    {
+      title: "Embedding",
+      description: "Size an iframe to its content without a second scrollbar."
+    },
+    /* @__PURE__ */ React.createElement("p", { className: "preview-section-desc" }, "Importing anything from ", /* @__PURE__ */ React.createElement("code", null, "npm:@one-data/observable-themes/utils"), " loads the embed module. When a page runs inside an iframe or with ", /* @__PURE__ */ React.createElement("code", null, "?embed=true"), " in its URL, the module adds the ", /* @__PURE__ */ React.createElement("code", null, "embedded"), " class to ", /* @__PURE__ */ React.createElement("code", null, "<html>"), " and posts", " ", /* @__PURE__ */ React.createElement("code", null, "{ height }"), " to the parent window whenever the page height changes, rounded up to a whole pixel."),
+    /* @__PURE__ */ React.createElement("p", { className: "preview-section-desc" }, "A parent that sizes the iframe to the posted height should load the page with", " ", /* @__PURE__ */ React.createElement("code", null, "?embed=true"), ". A framed page with that flag hides its own overflow, which removes the second scrollbar. A framed page without the flag keeps scrolling, for hosts that embed it at a fixed height."),
+    /* @__PURE__ */ React.createElement(CodeBlock, { code: `<iframe id="dashboard" src="https://data-apps.one.org/my-app/index.html?embed=true"></iframe>
+<script>
+  const iframe = document.getElementById("dashboard")
+  window.addEventListener("message", (event) => {
+    if (event.source === iframe.contentWindow && typeof event.data?.height === "number") {
+      iframe.style.height = \`\${event.data.height}px\`
+    }
+  })
+<\/script>` }),
+    /* @__PURE__ */ React.createElement("p", { className: "preview-section-desc" }, "Framed content must not size itself in ", /* @__PURE__ */ React.createElement("code", null, "vh"), " units. Inside an iframe", " ", /* @__PURE__ */ React.createElement("code", null, "vh"), " is the iframe height, so an element with ", /* @__PURE__ */ React.createElement("code", null, "min-height: 100vh"), " ", "grows with every posted height and the iframe grows without end.")
   ));
 }
 export {
