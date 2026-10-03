@@ -46,6 +46,27 @@ import { ONEColors, ONEPalette }         from "npm:@one-data/observable-themes/c
 import { formatValue, downloadXLSX }    from "npm:@one-data/observable-themes/utils"
 ```
 
+
+## Embedding
+
+Importing anything from `npm:@one-data/observable-themes/utils` loads the embed module. When a page runs inside an iframe or with `?embed=true` in its URL, the module adds the `embedded` class to `<html>` and posts `{ height }` to the parent window whenever the page height changes. The height is the `<html>` border-box height rounded up to a whole pixel.
+
+A parent that sizes the iframe to the posted height should load the page with `?embed=true`. A framed page with that flag hides its own overflow, which removes a second scrollbar inside the parent page. A framed page without the flag keeps scrolling, for hosts that embed it at a fixed height.
+
+```html
+<iframe id="dashboard" src="https://data-apps.one.org/my-app/index.html?embed=true"></iframe>
+<script>
+  const iframe = document.getElementById("dashboard")
+  window.addEventListener("message", (event) => {
+    if (event.source === iframe.contentWindow && typeof event.data?.height === "number") {
+      iframe.style.height = `${event.data.height}px`
+    }
+  })
+</script>
+```
+
+Framed content must not size itself in `vh` units. Inside an iframe `vh` is the iframe height, so an element with `min-height: 100vh` grows with every posted height and the iframe grows without end.
+
 ---
 
 For interactive demos, prop references, and usage examples for every component, visit the **[documentation site](https://onecampaign.github.io/observable-themes/)**.
