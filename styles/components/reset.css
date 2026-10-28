@@ -29,6 +29,14 @@
   width: 5rem; /* matches w-20 intent; beats Framework's 240px */
 }
 
+/* Chrome hides spin buttons until hover; show them always to match Safari/Firefox */
+.range-input input[type="number"]::-webkit-inner-spin-button,
+.range-input input[type="number"]::-webkit-outer-spin-button,
+.range-input-mini input[type="number"]::-webkit-inner-spin-button,
+.range-input-mini input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
 .range-input-mini input[type="number"] {
   width: auto;
 }
