@@ -33,4 +33,5 @@ jobs:
 
       - name: Publish
         if: steps.version-check.outputs.skip == 'false'
-        run: npm publish --access public
+        # verbose: npm logs trusted-publishing (OIDC) exchange failures only at this level
+        run: npm publish --access public --loglevel verbose
